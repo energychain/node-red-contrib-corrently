@@ -6,6 +6,13 @@ module.exports = function(RED) {
 
         var node = this;
         node.on('input', async function(msg) {
+          let additionalIncome = 0;
+          if(!isNaN(msg.payload)) {
+            additionalIncome = msg.payload;
+          }
+          if(additionalIncome>1000000) additionalIncome = 0;
+          config.additionalIncome = additionalIncome;
+
           msg.payload = await lib(config,node.context());
           node.send(msg);
         });
