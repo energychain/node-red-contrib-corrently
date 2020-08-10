@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-corrently",
+  "name": "node-red-contrib-corrently",
   "version": "0.5.0",
   "description": "Node RED Nodes to work with the Corrently Ecosystem in Germany",
   "main": "app.js",
