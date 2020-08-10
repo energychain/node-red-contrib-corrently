@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Strompreis',{
+        category: 'Corrently',
+        color: '#C7E9C0',
+        defaults: {
+            name: {value: null},
+            stromkonto: {value: null,required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "bridge-dash.png",
+        label: function() {
+            return this.name||"Strompreis";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Strompreis">
+    <div class="form-row">
+          <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+          <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+          <label for="node-input-stromkonto"><i class="icon-tag"></i> Stromkonto</label>
+          <input type="text" id="node-input-stromkonto">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Strompreis">
+    <p>Bei einem <a href="https://www.corrently.de/">Corrently Ökostromprodukt</a> wird parallel zum Strombezug neue Erzeugung aufgebaut. Diese wächst kontinuierlich an, wodurch ein geringerer Stromverbrauch zu bezahlen ist. Mithilfe dieses Nodes wird der tatsächliche Strompreis ermittelt, welcher sich aus der Formel
+      <code>(Verbrauch - Corrently Erzeugung) * Arbeitspreis</code>  ergibt.</p>
+    <h3>Konfiguration</h3>
+    <h4><code>Stromkonto</code></h4>
+    Kontonummer des Corrently Stromkonto (0x....)
+    <h3>Output</h3>
+    <h4><code>msg.payload.pricePerKWH</code></h4>
+    <p>Kilo-Watt-Stunden Preis (Strompreis) nach aktuellem Verbrauch.</p>
+    <h4><code>msg.payload.costPerDay</code></h4>
+    <p>Stromkosten pro Tag bei aktuellem Verbrauch (Durchschnitt über die letzten Tage).</p>
+    <h4><code>msg.payload.dailyKWH</code></h4>
+    <p>Aktueller Tagesdurchschnittsverbrauch in Kilo-Watt-Stunden</p>
+</script>
