@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-corrently",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Node RED Nodes to work with the Corrently Ecosystem in Germany",
   "main": "run.js",
   "scripts": {
@@ -15,11 +15,13 @@
     "stromdao",
     "energy",
     "node-red",
-    "smartgrid"
+    "smartgrid",
+    "gruenstromindex",
+    "strompreis"
   ],
   "bin": {
-    "corrently": "./app.js",
-    "corrently.stromkonto": "./app.js"
+    "corrently.strompreis": "./strompreis_cli.js",
+    "corrently.gruenstromindex": "./gsi_cli.js"
   },
   "funding": {
     "type": "corporation",
@@ -32,7 +34,8 @@
   },
   "node-red": {
     "nodes": {
-      "Strompreis": "Strompreis.js"
+      "Strompreis": "Strompreis.js",
+      "GruenstromIndex": "GSI.js"
     }
   },
   "homepage": "https://github.com/energychain/node-red-contrib-corrently#readme",

@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('GruenstromIndex',{
+        category: 'Corrently',
+        color: '#D7D7A0',
+        defaults: {
+            name: {value: null},
+            plz: {value: null,required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-line-chart",
+        label: function() {
+            return this.name||"GrünstromIndex";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="GruenstromIndex">
+    <div class="form-row">
+          <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+          <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+          <label for="node-input-plz"><i class="icon-tag"></i> Postleitzahl (nur Deutschland)</label>
+          <input type="text" id="node-input-plz">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="GruenstromIndex">
+    <p>Nutzung des <a href='https://www.gruenstromindex.de/' target='_blank'>Corrently GrünstromIndex</a> innerhalb von Node RED.</p>
+    <h3>Konfiguration</h3>
+    <h4><code>Postleitzahl</code></h4>
+    Postleitzahl in Deutschland, für die der GrünstromIndex abgerufen werden soll
+    <h3>Input</h3>
+    <h4><code>msg.payload</code></h4>
+    <p>Postleitzahl in Deutschland, für die der GrünstromIndex abgerufen werden soll.</p>
+    <h3>Output</h3>
+    <h4><code>msg.payload</code></h4>
+    <p>Objekt mit den Daten des GrünstromIndex</p>
+</script>

@@ -1,14 +1,14 @@
 <script type="text/javascript">
     RED.nodes.registerType('Strompreis',{
         category: 'Corrently',
-        color: '#C7E9C0',
+        color: '#D7D7A0',
         defaults: {
             name: {value: null},
             stromkonto: {value: null,required:true}
         },
         inputs:1,
         outputs:1,
-        icon: "bridge-dash.png",
+        icon: "font-awesome/fa-money",
         label: function() {
             return this.name||"Strompreis";
         }

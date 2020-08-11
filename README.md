@@ -26,7 +26,7 @@ npm install -g node-red-contrib-corrently
 
 ### Use from Commandline (CLI)
 ```shell
-corrently.stromkonto <Stromkonto>
+corrently.strompreis <Stromkonto>
 ```
 
 ### Use as module
