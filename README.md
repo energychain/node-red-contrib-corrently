@@ -1,6 +1,6 @@
 # node-red-contrib-corrently
 
-![npm](https://img.shields.io/npm/dw/node-red-contrib-corrently) [![Build Status](https://travis-ci.com/energychain/node-red-contrib-corrently.svg?branch=master)](https://travis-ci.com/energychain/node-red-contrib-corrently) [![Code Quality](https://www.code-inspector.com/project/12112/score/svg)]
+![npm](https://img.shields.io/npm/dw/node-red-contrib-corrently) [![Build Status](https://travis-ci.com/energychain/node-red-contrib-corrently.svg?branch=master)](https://travis-ci.com/energychain/node-red-contrib-corrently) [![Code Quality](https://www.code-inspector.com/project/12112/score/svg)](https://frontend.code-inspector.com/public/project/12112/node-red-contrib-corrently/dashboard)
 
 Work with the Corrently Energy (Power) Ecosystem in Germany from:
 - Node RED
