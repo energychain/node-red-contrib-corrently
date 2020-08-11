@@ -10,6 +10,17 @@ module.exports = function(RED) {
           if(!isNaN(msg.payload)) {
             additionalIncome = msg.payload;
           }
+          if(typeof msg.payload == 'object') {
+            if(typeof msg.payload.additionalIncome !== 'undefined') {
+              additionalIncome = msg.payload.additionalIncome;
+            }
+            if(typeof msg.payload.stromkonto !== 'undefined') {
+              config.stromkonto = msg.payload.stromkonto;
+            }
+            if(typeof msg.payload.sko !== 'undefined') {
+              config.stromkonto = msg.payload.sko;
+            }
+          }
           if(additionalIncome>1000000) additionalIncome = 0;
           config.additionalIncome = additionalIncome;
 
