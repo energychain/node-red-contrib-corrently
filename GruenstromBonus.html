@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('GruenstromBonus',{
+        category: 'Corrently',
+        color: '#D7D7A0',
+        defaults: {
+            name: {value: null},
+            stromkonto: {value: null,required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-gift",
+        label: function() {
+            return this.name||"GruenstromBonus";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="GruenstromBonus">
+    <div class="form-row">
+          <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+          <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+          <label for="node-input-stromkonto"><i class="icon-tag"></i> Stromkonto</label>
+          <input type="text" id="node-input-stromkonto">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="GruenstromBonus">
+    <p>Liefert den gesammelten und den in Corrently Erzeugung getauschten Grünstrombonus. Bei einerm <a href="https://www.corrently.de/">Corrently Ökostromprodukt</a> erhält man GrünstromBonus, wenn der Strom in Zeiten bezogen wird, an denen dieser aus regionaler Erzeugung stammt.</p>
+</script>

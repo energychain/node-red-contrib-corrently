@@ -40,6 +40,24 @@ const app=async function() {
 app();
 ```
 
+## Node: GruenstromIndex
+
+### Use from Commandline (CLI)
+```shell
+corrently.gruenstromindex <Postleitzahl>
+```
+
+### Use as module
+```javascript
+const Corrently = new require("node-red-contrib-corrently")();
+
+const app=async function() {
+	console.log(await Corrently.GruenstromIndex('69256'));
+}
+
+app();
+```
+
 ## Funding
 This module is part of the Corrently Ecosystem which looks for funding in Germany:  https://www.stromdao.de/crowdfunding/info
 ![STROMDAO - Corrently Crowdfunding](https://squad.stromdao.de/nextcloud/index.php/s/Do4pzpM7KndZxAx/preview)

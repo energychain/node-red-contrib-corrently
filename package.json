@@ -17,11 +17,13 @@
     "node-red",
     "smartgrid",
     "gruenstromindex",
-    "strompreis"
+    "strompreis",
+    "gruenstrombonus"
   ],
   "bin": {
     "corrently.strompreis": "./strompreis_cli.js",
-    "corrently.gruenstromindex": "./gsi_cli.js"
+    "corrently.gruenstromindex": "./gsi_cli.js",
+    "corrently.gruenstrombonus": "./gruenstrombonus_cli.js"
   },
   "funding": {
     "type": "corporation",
@@ -35,10 +37,11 @@
   "node-red": {
     "nodes": {
       "Strompreis": "Strompreis.js",
-      "GruenstromIndex": "GSI.js"
+      "GruenstromIndex": "GSI.js",
+      "GruenstromBonus": "GruenstromBonus.js"
     }
   },
-  "homepage": "https://github.com/energychain/node-red-contrib-corrently#readme",
+  "homepage": "https://www.corrently.de/",
   "dependencies": {
     "axios": "^0.19.2",
     "node-persist": "^3.1.0"
