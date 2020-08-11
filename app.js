@@ -9,11 +9,11 @@ const app = async function(sko) {
     let config = {
       stromkonto: sko,
       additionalIncome: 0
-    }
+    };
     let result = await lib(config,storage);
     console.log(result);
     return;
-}
+};
 
 if(process.argv.length < 3) {
   console.warn("Please specify stromkonto as argument");

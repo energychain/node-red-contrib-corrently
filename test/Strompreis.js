@@ -83,7 +83,7 @@ describe('Strompreis Node', function () {
             cost1 =   msg.payload.costPerDay;
             n1.receive({ payload: {stromkonto:'0x7866f187f30cd52Bdbd5c4184fD3ee6168Ae0dB4',additionalIncome:123.456} });
           } else {
-            should.equal((cost1 > msg.payload.costPerDay),true)
+            should.equal((cost1 > msg.payload.costPerDay),true);
             done();
           }
         });
