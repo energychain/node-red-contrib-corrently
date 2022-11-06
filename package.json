@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-corrently",
-  "version": "0.5.6",
+  "version": "1.0.1",
   "description": "Node RED Nodes to work with the Corrently Ecosystem in Germany",
   "main": "run.js",
   "scripts": {
@@ -36,9 +36,7 @@
   },
   "node-red": {
     "nodes": {
-      "Strompreis": "Strompreis.js",
-      "GruenstromIndex": "GSI.js",
-      "GruenstromBonus": "GruenstromBonus.js"
+      "GruenstromIndex": "GSI.js"
     }
   },
   "homepage": "https://www.corrently.de/",

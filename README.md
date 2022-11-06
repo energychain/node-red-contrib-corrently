@@ -7,7 +7,7 @@ Work with the Corrently Energy (Power) Ecosystem in Germany from:
 - Command Line
 - Embedded into your Code/System
 
-This is early stage development.
+For detailes information please check offical documentation in german: https://corrently.io/books/grunstromindex
 
 ## Installation
 
